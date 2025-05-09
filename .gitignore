@@ -1,0 +1,17 @@
+*
+!.config
+!.config/fish
+!.config/fish/**
+!.config/nvim
+!.config/nvim/**
+!.config/raycast
+!.config/raycast/**
+.config/raycast/extensions/node_modules
+!.config/tmux
+!.config/tmux/**
+!.config/starship.toml
+!.tmux
+!.tmux/**
+!.gitignore
+!.tmux.conf
+!.zshrc

@@ -1,0 +1,8 @@
+[character]
+success_symbol = '[➜](bold green)'
+
+[aws]
+format = ''
+
+[lua]
+format = ''
