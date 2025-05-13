@@ -5,3 +5,12 @@ which allows the command:
 bindfs [SRC] [DEST]
 ```
 to be used to create git readable links
+
+install all apps & tools:
+```terminal
+brew install fish nvim tmux starship
+```
+[ITerm2](https://iterm2.com/)
+[Raycast](https://www.raycast.com/)
+[AltTab](https://alt-tab-macos.netlify.app/)
+
