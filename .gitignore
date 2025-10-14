@@ -6,3 +6,4 @@
 .cargo/registry
 .cargo/.package-cache
 .cargo/.package-cache-mutate
+.config/mozc/.session.ipc
