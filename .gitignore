@@ -1,0 +1,8 @@
+.ssh
+.local
+.cache
+.mozilla/firefox
+.cargo/bin
+.cargo/registry
+.cargo/.package-cache
+.cargo/.package-cache-mutate
