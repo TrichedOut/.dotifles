@@ -1,9 +1,12 @@
-.ssh
-.local
+.bash_history
 .cache
-.mozilla/firefox
 .cargo/bin
-.cargo/registry
 .cargo/.package-cache
 .cargo/.package-cache-mutate
+.cargo/registry
 .config/mozc/.session.ipc
+Dev
+Downloads
+.local
+.mozilla/firefox
+.ssh
