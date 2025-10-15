@@ -5,8 +5,11 @@
 .cargo/.package-cache-mutate
 .cargo/registry
 .config/mozc/.session.ipc
-Dev
 Downloads
 .local
+Local
 .mozilla/firefox
 .ssh
+.java/fonts/17.0.15
+.gradle
+.eclipse/2139989682_linux_gtk_aarch64/configuration

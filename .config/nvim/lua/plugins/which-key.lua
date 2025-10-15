@@ -20,7 +20,6 @@ return {
       { "L", "<cmd>tabn<CR>", desc = "next tab" },
 
       { "<F9>", "<cmd>:nohl<CR>", desc = "clear highlight" },
-      { "<F1>", "<nop>" },
     })
   end,
 }
