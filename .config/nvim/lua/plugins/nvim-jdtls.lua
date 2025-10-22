@@ -4,7 +4,7 @@ return {
   opts = function()
     LazyVim = require("lazy")
     local cmd = { vim.fn.exepath("jdtls") }
-    local lombok_jar = vim.fn.expand("$MASON/share/jdtls/lombok.jar")
+    local lombok_jar = vim.fn.expand("/usr/share/java/jdtls/lombok.jar")
     table.insert(cmd, string.format("--jvm-arg=-javaagent:%s", lombok_jar))
     return {
       root_dir = function(path)
