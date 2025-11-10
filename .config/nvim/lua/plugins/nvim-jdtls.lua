@@ -8,7 +8,7 @@ return {
     table.insert(cmd, string.format("--jvm-arg=-javaagent:%s", lombok_jar))
     return {
       root_dir = function(path)
-        return vim.fs.root(path, { '.git', 'mvnw', 'gradlew', 'pom.xml', 'build.gradle', 'build.sbt' })
+        return vim.fs.root(path, { 'mvnw', 'gradlew', 'pom.xml', 'build.gradle', 'build.sbt' })
       end,
 
       -- How to find the project name for a given root dir.
@@ -28,41 +28,25 @@ return {
       -- if the Python wrapper script doesn't suffice.
       cmd = cmd,
       full_cmd = function(opts)
-        local fname = vim.api.nvim_buf_get_name(0)
-        local root_dir = opts.root_dir(fname)
-        local project_name = opts.project_name(root_dir)
+        -- local fname = vim.api.nvim_buf_get_name(0)
+        -- local root_dir = opts.root_dir(fname)
+        -- local project_name = opts.project_name(root_dir)
         local cmd = vim.deepcopy(opts.cmd)
-        if project_name then
-          vim.list_extend(cmd, {
-            "-configuration",
-            opts.jdtls_config_dir(project_name),
-            "-data",
-            opts.jdtls_workspace_dir(project_name),
-          })
-        end
+        -- if project_name then
+        --   vim.list_extend(cmd, {
+        --     "-configuration",
+        --     opts.jdtls_config_dir(project_name),
+        --     "-data",
+        --     opts.jdtls_workspace_dir(project_name),
+        --   })
+        -- end
         return cmd
       end,
-
-      -- These depend on nvim-dap, but can additionally be disabled by setting false here.
-      dap = { hotcodereplace = "auto", config_overrides = {} },
-      -- Can set this to false to disable main class scan, which is a performance killer for large project
-      dap_main = {},
-      test = true,
-      settings = {
-        java = {
-          inlayHints = {
-            parameterNames = {
-              enabled = "all",
-            },
-          },
-        },
-      },
     }
   end,
   config = function(_, opts)
     -- Find the extra bundles that should be passed on the jdtls command-line
     -- if nvim-dap is enabled with java debug/test.
-    local bundles = {} ---@type string[]
     local function attach_jdtls()
       local fname = vim.api.nvim_buf_get_name(0)
 
@@ -70,9 +54,6 @@ return {
       local config = {
         cmd = opts.full_cmd(opts),
         root_dir = opts.root_dir(fname),
-        init_options = {
-          bundles = bundles,
-        },
         settings = opts.settings,
       }
 

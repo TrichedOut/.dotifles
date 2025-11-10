@@ -16,8 +16,8 @@
       "pulseaudio",
       "bluetooth",
       "network",
-      "power-profiles-daemon",
       "cpu",
+      "temperature",
       "memory",
       "backlight",
       "battery",
@@ -29,13 +29,10 @@
       "format": "",
       "format-connected": "{device_battery_percentage}% "
     },
-    "tray": {
-      "spacing": 10,
-    },
     "clock": {
       "format": "{:%m/%d - %T}",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-      "interval": 1,
+      "interval": 1
     },
     "cpu": {
       "interval": 1,
@@ -74,24 +71,9 @@
         "format-icons": ["", "", "", "", ""],
         "interval": 5
     },
-    "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
-    },
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid}  ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-disconnected": "Disconnected 󰤫",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {

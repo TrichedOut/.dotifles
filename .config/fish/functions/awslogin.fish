@@ -1,4 +1,9 @@
-function awslogin --description "login to and export credentials for aws"
+function awslogin
   aws sso login
-  eval "$(aws configure export-credentials --format env)"
+  set IFS '\n'
+  for cred in (aws configure export-credentials --format env --profile default)
+    set field $(echo $cred | cut -d '=' -f 1 | cut -d ' ' -f 2)
+    set value $(echo $cred | cut -d '=' -f 2)
+    set -gx $field $value
+  end;
 end

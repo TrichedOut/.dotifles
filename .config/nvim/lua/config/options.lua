@@ -45,3 +45,6 @@ opt.conceallevel = 2
 
 -- add a line at 81 characters
 opt.colorcolumn = "81"
+
+vim.cmd("se noeol")
+vim.cmd("se nofixeol")
