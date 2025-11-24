@@ -14,7 +14,7 @@ Downloads
 .eclipse/2139989682_linux_gtk_aarch64/configuration
 go/pkg
 .gradle
-.java/fonts/17.0.15
+.java
 .local
 Local
 .mozilla/firefox
@@ -23,3 +23,4 @@ Local
 .config/aseprite/sessions
 .npm
 .zen
+.config/obs-studio
