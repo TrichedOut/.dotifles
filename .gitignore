@@ -7,9 +7,14 @@
 .cargo/.package-cache
 .cargo/.package-cache-mutate
 .cargo/registry
+.config/aseprite/aseprite.ini
+.config/aseprite/files
+.config/aseprite/sessions
 .config/fish/functions/keymongo.fish
 .config/go/telemetry/local
+.config/ibus/bus
 .config/mozc/.session.ipc
+.config/obs-studio
 Downloads
 .eclipse/2139989682_linux_gtk_aarch64/configuration
 go/pkg
@@ -18,9 +23,6 @@ go/pkg
 .local
 Local
 .mozilla/firefox
-.ssh
-.config/aseprite/files
-.config/aseprite/sessions
 .npm
+.ssh
 .zen
-.config/obs-studio

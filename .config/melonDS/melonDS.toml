@@ -1,12 +1,18 @@
+LastBIOSFolder = ""
 LastROMFolder = "/home/uaq/Local/Apps/melonDS/roms"
-RecentROM = ["/home/uaq/Local/Apps/melonDS/roms/SoulSilverJP.nds", "/home/uaq/Local/Apps/melonDS/roms/Pokémon Black.nds", "/home/uaq/Local/Apps/melonDS/roms/Pokémon Black 2.nds"]
-UITheme = ""
+RecentROM = ["/home/uaq/Local/Apps/melonDS/roms/Pokémon Black.nds", "/home/uaq/Local/Apps/melonDS/roms/Pokémon Black 2.nds", "/home/uaq/Local/Apps/melonDS/roms/SoulSilverJP.nds"]
+UITheme = "Fusion"
 PauseLostFocus = false
 FastForwardFPS = 1000.0
 AudioSync = false
 TargetFPS = 60.0
 LimitFPS = true
 SlowmoFPS = 30.0
+
+[DS]
+FirmwarePath = ""
+BIOS7Path = ""
+BIOS9Path = ""
 
 [Mic]
 InputType = 1
@@ -15,7 +21,11 @@ WavPath = ""
 
 [LAN]
 DirectMode = false
-Device = ""
+Device = "wlan0"
+
+[MP]
+RecvTimeout = 25
+AudioMode = 1
 
 [Instance0]
 EnableCheats = false
@@ -35,8 +45,22 @@ BreakOnStartup = false
 Port = 3333
 BreakOnStartup = false
 
+[Instance0.RTC]
+Offset = 0
+
 [Instance0.Window1]
 Enabled = false
+ShowOSD = true
+Geometry = "AdnQywADAAAAAAAAAAAAAAAAAP8AAAGVAAAAAAAAAAAAAADHAAAAYwAAAAACAAAABegAAAAAAAAAAAAAAP8AAAGV"
+ScreenLayout = 0
+ScreenRotation = 0
+ScreenAspectBot = 0
+ScreenGap = 0
+ScreenSwap = false
+ScreenSizing = 0
+IntegerScaling = false
+ScreenAspectTop = 0
+ScreenFilter = false
 
 [Instance0.Firmware]
 Username = "melonDS"
@@ -51,79 +75,76 @@ MAC = ""
 Enabled = false
 
 [Instance0.Keyboard]
-HK_FastForward = 77
-HK_Mic = -1
-Down = 83
-B = 75
-X = 73
-HK_VolumeDown = -1
-HK_GuitarGripBlue = -1
-A = 76
-HK_SolarSensorIncrease = -1
-Y = 74
-HK_FrameStep = -1
-HK_GuitarGripRed = -1
-L = 81
-R = 69
-Left = 65
-HK_SwapScreens = -1
-HK_SwapScreenEmphasis = -1
-HK_PowerButton = -1
-HK_Reset = -1
-HK_Lid = -1
-HK_SolarSensorDecrease = -1
-HK_VolumeUp = -1
-HK_GuitarGripGreen = -1
-HK_SlowMoToggle = -1
-HK_FastForwardToggle = -1
-HK_GuitarGripYellow = -1
-HK_FrameLimitToggle = -1
-Up = 87
 HK_FullscreenToggle = -1
 HK_SlowMo = -1
-HK_Pause = -1
+R = 69
+HK_GuitarGripRed = -1
+L = 81
+HK_Mic = -1
+HK_VolumeDown = -1
+HK_GuitarGripBlue = -1
+HK_FastForwardToggle = -1
+HK_SlowMoToggle = -1
+HK_FrameStep = -1
+Y = 74
+A = 76
+HK_SolarSensorIncrease = -1
+HK_Pause = 96
 Right = 68
 Start = 32
 Select = 16777220
-
-[Instance0.Joystick]
-HK_FastForward = -1
-HK_Mic = -1
-Down = -1
-B = -1
-X = -1
-HK_VolumeDown = -1
-HK_GuitarGripBlue = -1
-A = -1
-HK_SolarSensorIncrease = -1
-Y = -1
-HK_FrameStep = -1
-HK_GuitarGripRed = -1
-L = -1
-R = -1
-Left = -1
+HK_FastForward = 77
+Left = 65
 HK_SwapScreens = -1
 HK_SwapScreenEmphasis = -1
-HK_PowerButton = -1
-HK_Reset = -1
+Down = 83
+B = 75
 HK_Lid = -1
 HK_SolarSensorDecrease = -1
 HK_VolumeUp = -1
 HK_GuitarGripGreen = -1
-HK_SlowMoToggle = -1
-HK_FastForwardToggle = -1
+HK_PowerButton = -1
+HK_Reset = -1
 HK_GuitarGripYellow = -1
 HK_FrameLimitToggle = -1
-Up = -1
+Up = 87
+X = 73
+
+[Instance0.Joystick]
 HK_FullscreenToggle = -1
 HK_SlowMo = -1
+R = -1
+HK_GuitarGripRed = -1
+L = -1
+HK_Mic = -1
+HK_VolumeDown = -1
+HK_GuitarGripBlue = -1
+HK_FastForwardToggle = -1
+HK_SlowMoToggle = -1
+HK_FrameStep = -1
+Y = -1
+A = -1
+HK_SolarSensorIncrease = -1
 HK_Pause = -1
 Right = -1
 Start = -1
 Select = -1
-
-[Instance0.RTC]
-Offset = 0
+HK_FastForward = -1
+Left = -1
+HK_SwapScreens = -1
+HK_SwapScreenEmphasis = -1
+Down = -1
+B = -1
+HK_Lid = -1
+HK_SolarSensorDecrease = -1
+HK_VolumeUp = -1
+HK_GuitarGripGreen = -1
+HK_PowerButton = -1
+HK_Reset = -1
+HK_GuitarGripYellow = -1
+HK_FrameLimitToggle = -1
+Up = -1
+X = -1
 
 [Instance0.DS]
 [Instance0.DS.Battery]
@@ -131,7 +152,7 @@ LevelOkay = true
 
 [Instance0.Window0]
 ShowOSD = true
-Geometry = "AdnQywADAAAAAAAAAAAAAAAAAugAAAOKAAAAAAAAAAAAAALoAAADigAAAAACAAAABegAAAAAAAAAAAAAAugAAAOK"
+Geometry = "AdnQywADAAAAAAAAAAAAAAAABdkAAAOKAAAAAAAAAAAAAAXZAAADigAAAAACAAAABegAAAAAAAAAAAAABdkAAAOK"
 ScreenLayout = 0
 ScreenRotation = 0
 ScreenAspectBot = 0
@@ -150,15 +171,16 @@ Enabled = false
 Volume = 256
 DSiVolumeSync = false
 
-[MP]
-RecvTimeout = 25
-AudioMode = 1
-
 [3D]
 Renderer = 0
 
 [3D.Soft]
 Threaded = true
+
+[3D.GL]
+ScaleFactor = 1
+BetterPolygons = false
+HiresCoordinates = true
 
 [Emu]
 ConsoleType = 0
@@ -170,6 +192,8 @@ RelocSRAM = false
 
 [Screen]
 UseGL = false
+VSync = false
+VSyncInterval = 1
 
 [JIT]
 MaxBlockSize = 32
@@ -186,11 +210,23 @@ Interpolation = 0
 Hide = false
 HideSeconds = 5
 
-[DLDI]
-Enable = false
-
 [DSi]
+FullBIOSBoot = false
+FirmwarePath = ""
+BIOS9Path = ""
+BIOS7Path = ""
 NANDPath = ""
+
+[DSi.DSP]
+HLE = true
+
+[DSi.SD]
+FolderPath = ""
+FolderSync = false
+ReadOnly = false
+ImagePath = "dsisd.bin"
+ImageSize = 0
+Enable = false
 
 [DSi.Camera0]
 XFlip = false
@@ -203,4 +239,12 @@ XFlip = false
 InputType = 0
 ImagePath = ""
 DeviceName = ""
+
+[DLDI]
+FolderPath = ""
+FolderSync = false
+ReadOnly = false
+ImagePath = "dldi.bin"
+ImageSize = 0
+Enable = false
 
