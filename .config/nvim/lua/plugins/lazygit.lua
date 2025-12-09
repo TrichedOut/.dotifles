@@ -11,10 +11,11 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
   },
-  -- setting the keybinding for LazyGit with 'keys' is recommended in
-  -- order to load the plugin when the command is run for the first time
-  keys = {
-    { "<leader>lg", "<cmd>LazyGit<cr>", desc = "Open lazy git" },
-    { "<leader>lc", "<cmd>LazyGitCurrentFile<cr>", desc = "Open lazy git for current file" },
-  },
+  keys = function()
+    require("which-key").add({
+      { "<leader>l",  group = "[l]azygit" },
+      { "<leader>lg", "<cmd>LazyGit<cr>",  desc = "lazy[g]it" },
+      { "<leader>lc", "<cmd>LazyGitCurrentFile<cr>", desc = "[c]urrent file" },
+    })
+  end
 }

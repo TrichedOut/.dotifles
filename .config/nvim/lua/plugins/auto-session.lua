@@ -8,9 +8,10 @@ return {
       auto_session_suppress_dirs = { "~/", "~/Dev/", "~/Downloads", "~/Documents", "~/Desktop/" },
     })
 
-    require 'which-key'.add({
-      { "<leader>wr", "<cmd>SessionRestore<CR>", desc = "restore session" },
-      { "<leader>ws", "<cmd>SessionSave<CR>", desc = "save session" },
+    require("which-key").add({
+      { "<leader>s",  group = "[s]ession" },
+      { "<leader>sr", "<cmd>SessionRestore<CR>", desc = "[r]estore" },
+      { "<leader>ss", "<cmd>SessionSave<CR>", desc = "[s]ave" },
     })
   end,
 }

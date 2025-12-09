@@ -12,10 +12,11 @@ return {
   },
   config = function()
     require 'which-key'.add({
-      { "<leader>t", group = "[T]abs"},
-      { "<leader>to", "<cmd>tabnew<CR>", desc = "new tab" },
-      { "<leader>tc", "<cmd>tabclose<CR>", desc = "close tab" },
-      { "<leader>tf", "<cmd>tabnew %<CR>", desc = "open in new tab" },
+      { "<leader>t", group = "[t]abs"},
+      { "<leader>to", "<cmd>tabnew<CR>", desc = "[o]pen" },
+      { "<leader>tc", "<cmd>tabclose<CR>", desc = "[c]lose" },
+      { "<leader>td", "<cmd>tabnew %<CR>", desc = "[d]uplicate" },
+
       { "H", "<cmd>tabp<CR>", desc = "previous tab" },
       { "L", "<cmd>tabn<CR>", desc = "next tab" },
 

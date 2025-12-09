@@ -86,8 +86,10 @@ return {
     })
 
     -- Avoid race condition by calling attach the first time, since the autocmd won't fire.
-    require 'which-key'.add({
-      { "<leader>jdt", attach_jdtls, desc = "attach jdtls" },
+    require("which-key").add({
+      { "<leader>j",  group = "[j]dtls" },
+      { "<leader>d",  group = "j[d]tls" },
+      { "<leader>jdt", attach_jdtls, desc = "jd[t]ls" },
     })
   end,
 }

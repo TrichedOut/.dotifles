@@ -28,17 +28,20 @@ return {
     telescope.load_extension("fzf")
 
     -- set keymaps
-    local keymap = vim.keymap -- for conciseness
     local tele = require 'telescope.builtin'
 
-    keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
-    keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
-    keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
-    keymap.set("n", "<leader>fr", "<cmd>Telescope resume<cr>", { desc = "Resume previous Telescope query" })
-    keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
-    keymap.set("n", "<leader>fm", 
-      function()
-        tele.man_pages({ sections = { "1", "2", "3" } })
-      end, { desc = "Man pages" })
+    require("which-key").add({
+      { "<leader>f",  group = "[f]ind" },
+      { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "[f]iles" },
+      { "<leader>fs", "<cmd>Telescope live_grep<cr>", desc = "[s]tring" },
+      { "<leader>fc", "<cmd>Telescope grep_string<cr>", desc = "[c]urrent" },
+      { "<leader>fr", "<cmd>Telescope resume<cr>", desc = "[r]esume" },
+      { "<leader>ft", "<cmd>TodoTelescope<cr>", desc = "[t]odo" },
+      { "<leader>fm", 
+        function()
+          tele.man_pages({ sections = { "1", "2", "3" } })
+        end, 
+        desc = "[m]an page" },
+    })
   end,
 }

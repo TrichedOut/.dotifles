@@ -40,10 +40,9 @@ return {
     })
 
     
-    -- set keymaps
-    local keymap = vim.keymap -- for conciseness
-
-    keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
-    keymap.set("n", "<leader>ef", "<cmd>NvimTreeFocus<CR>", { desc = "Focus file explorer" }) -- focus file explorer
+    require("which-key").add({
+      { "<leader>e",  group = "[e]xplorer" },
+      { "<leader>ee", "<cmd>NvimTreeToggle<CR>", desc = "[e]nter" },
+    })
   end
 }
