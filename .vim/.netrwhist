@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/proc/asound/card1/pcm0c/sub0'
+let g:netrw_dirhist_3='/proc/asound/card1/pcm0c'
+let g:netrw_dirhist_2='/proc/asound/card1'
+let g:netrw_dirhist_1='/proc/asound'

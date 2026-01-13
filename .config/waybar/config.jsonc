@@ -1,87 +1,99 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    // "height": 30, // Waybar height (to be removed for auto height)
+    "layer": "top", // Waybar at top layer
+    "position": "right", // Waybar position (top|bottom|left|right)
+    "justify": "center",
+    // "height": 38, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-      "hyprland/workspaces",
-    ],
-    // "modules-center": [
-    //     "sway/window"
-    // ],
-    "modules-right": [
-      "pulseaudio",
-      "bluetooth",
-      "network",
-      "cpu",
-      "temperature",
-      "memory",
-      "backlight",
-      "battery",
+      "tray",
       "clock",
-      "tray"
+      "battery",
+      "backlight",
+      "memory",
+      "temperature",
+      "network",
+      "pulseaudio",
+      "bluetooth"
+    ],
+    "modules-center": [
+      "cpu"
+    ],
+    "modules-right": [
+      "hyprland/workspaces"
     ],
     // Modules configuration
     "bluetooth": {
       "format": "",
-      "format-connected": "{device_battery_percentage}% "
+      "format-connected": "%\n{device_battery_percentage}"
     },
     "clock": {
-      "format": "{:%m/%d - %T}",
+      "format": "{:%H\n%M\n%S\n==\n%m\n%d}",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
       "interval": 1
     },
     "cpu": {
       "interval": 1,
-      "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}{icon8}{icon9}",
+      "format": "{icon0}\n{icon1}\n{icon2}\n{icon3}\n{icon4}\n{icon5}\n{icon6}\n{icon7}\n{icon8}\n{icon9}",
       "format-icons": [
-        "<span color='#69ff94'>▁</span>", // green
-        "<span color='#2aa9ff'>▂</span>", // blue
-        "<span color='#f8f8f2'>▃</span>", // white
-        "<span color='#f8f8f2'>▄</span>", // white
-        "<span color='#ffffa5'>▅</span>", // yellow
-        "<span color='#ffffa5'>▆</span>", // yellow
-        "<span color='#ff9977'>▇</span>", // orange
-        "<span color='#dd532e'>█</span>"  // red
+        "<span color='#69ff94'>▏ </span>", // green
+        "<span color='#69ff94'>▎ </span>", // green
+        "<span color='#2aa9ff'>▍ </span>", // blue
+        "<span color='#2aa9ff'>▌ </span>", // blue
+        "<span color='#f8f8f2'>▋ </span>", // white
+        "<span color='#f8f8f2'>▊ </span>", // white
+        "<span color='#f8f8f2'>▉ </span>", // white
+        "<span color='#f8f8f2'>█ </span>", // white
+        "<span color='#ffffa5'>█▏</span>", // yellow
+        "<span color='#ffffa5'>█▎</span>", // yellow
+        "<span color='#ffffa5'>█▍</span>", // yellow
+        "<span color='#ffffa5'>█▌</span>", // yellow
+        "<span color='#ff9977'>█▋</span>", // orange
+        "<span color='#ff9977'>█▊</span>", // orange
+        "<span color='#dd532e'>█▉</span>", // red
+        "<span color='#dd532e'>██</span>"  // red
       ]
     },
     "memory": {
-      "format": "{}% "
+      "format": " \n{}"
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format": "{icon}",
+        "format-icons": [" ", "", "", "", "", "", "", "󰽣", "", "", "", "", "", "", "!"]
     },
     "battery": {
       "states": {
             // "good": 95,
             "critical": 20
       },
-      "format": "{capacity}% {icon}",
-      "format-full": "{capacity}% {icon}",
-      "format-charging": "{capacity}% ",
-      "format-plugged": "{capacity}% ",
-      "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""],
-        "interval": 5
+      "format": "{icon}\n{capacity}",
+      "format-charging": "󰂄\n{capacity}",
+      "format-plugged": "󰂄\n{capacity}",
+      "format-icons": [" ", " ", " ", " ", " "],
+      "interval": 5
+      // "format-alt": "{time} {icon}",
+      // "format-good": "", // An empty format will hide the module
+      // "format-full": "",
     },
     "network": {
-        "format-wifi": "{essid}  ",
-        "format-disconnected": "Disconnected 󰤫",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-wifi": " ",
+        "format-disconnected": "󰤫 "
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon}",
+        "format": "{icon}\n{volume}",
         "format-icons": {
-          "default": ["", "", ""]
+          "default": [" ", " ", " "]
         },
         "on-click": "pavucontrol"
+    },
+    "temperature": {
+      "format": "{temperatureC}\n°C"
+    },
+    "hyprland/workspaces": {
+      "format": "{name}"
     }
 }

@@ -10,8 +10,8 @@ return {
 
     require("which-key").add({
       { "<leader>s",  group = "[s]ession" },
-      { "<leader>sr", "<cmd>SessionRestore<CR>", desc = "[r]estore" },
-      { "<leader>ss", "<cmd>SessionSave<CR>", desc = "[s]ave" },
+      { "<leader>sr", "<cmd>Autosession restore<CR>", desc = "[r]estore" },
+      { "<leader>ss", "<cmd>Autosession save<CR>", desc = "[s]ave" },
     })
   end,
 }

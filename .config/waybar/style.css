@@ -1,12 +1,13 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: FiraCode, Roboto, Helvetica, Arial, sans-serif;
+  font-family: "FiraCodeNerdFont";
   font-size: 12px;
+  padding: 0 2px;
 }
 
 window#waybar {
   background-color: rgba(43, 48, 59, 0.5);
-  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+  border-left: 3px solid rgba(100, 114, 125, 0.5);
   color: #ffffff;
   transition-property: background-color;
   transition-duration: .5s;
@@ -21,23 +22,23 @@ button {
   /* Use box-shadow instead of border so the text isn't offset */
   box-shadow: inset 0 -3px transparent;
   /* Avoid rounded borders under each button name */
-  border: none;
   border-radius: 0;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
 }
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover { }
 
 #workspaces button {
-  padding: 0 5px;
   background-color: transparent;
   color: #ffffff;
+  min-width: unset;
+	min-height: unset;
+  padding: 1px 1px;
 }
 
 #workspaces button:hover {
@@ -46,21 +47,14 @@ button:hover {
 
 #workspaces button.focused, #workspaces button.active {
   background-color: #64727D;
-  box-shadow: inset 0 -3px #ffffff;
 }
 
 #workspaces button.urgent {
   background-color: #eb4d4b;
 }
 
-#mode {
-  background-color: #64727D;
-  box-shadow: inset 0 -3px #ffffff;
-}
-
 #clock,
 #battery,
-#cpu,
 #memory,
 #disk,
 #temperature,
@@ -75,13 +69,14 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-  padding: 0 10px;
+  border-bottom: 2px solid rgba(100, 114, 125, 0.5);
+  padding: 1px 0 1px 3px;
   color: #ffffff;
 }
 
 #window,
 #workspaces {
-  margin: 0 4px;
+  margin: 1px 0;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -96,38 +91,12 @@ button:hover {
 
 #clock { }
 
-#battery {
-  padding-right: 15px;
-}
+#battery { }
 #battery.charging, #battery.plugged {
-  padding-right: 12px;
-  padding-top: 3px;
-  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
   background-color: #10510e;
 }
 #battery.critical:not(.charging) {
-  padding-top: 3px;
-  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
   background-color: #72010e;
-}
-
-#power-profiles-daemon {
-  padding-right: 15px;
-}
-
-#power-profiles-daemon.performance {
-  background-color: #f53c3c;
-  color: #ffffff;
-}
-
-#power-profiles-daemon.balanced {
-  background-color: #2980b9;
-  color: #ffffff;
-}
-
-#power-profiles-daemon.power-saver {
-  background-color: #2ecc71;
-  color: #000000;
 }
 
 #cpu { }
@@ -135,8 +104,6 @@ button:hover {
 #backlight { }
 #network { }
 #network.disconnected {
-  padding-top: 3px;
-  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
   background-color: #f53c3c;
 }
 #pulseaudio { }
