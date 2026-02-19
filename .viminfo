@@ -15,7 +15,7 @@ $
 
 # Command Line History (newest to oldest):
 :qa
-|2,0,1768262919,,"qa"
+|2,0,1770320337,,"qa"
 :q
 |2,0,1763435111,,"q"
 
@@ -30,28 +30,54 @@ $
 # Registers:
 
 # File marks:
-'0  1  4  /proc/asound/card1/pcm0c/sub0/info
-|4,48,1,4,1768262919,"/proc/asound/card1/pcm0c/sub0/info"
-'1  1  0  ~/Local/Dev/uic/cs473/cs473-f25-a51-moltm3/ir_list_to_mips.c
-|4,49,1,0,1763435111,"~/Local/Dev/uic/cs473/cs473-f25-a51-moltm3/ir_list_to_mips.c"
+'0  65  22  ~/Downloads/Python-3.13.12/README.rst
+|4,48,65,22,1770320337,"~/Downloads/Python-3.13.12/README.rst"
+'1  1  4  /proc/asound/card1/pcm0c/sub0/info
+|4,49,1,4,1768262919,"/proc/asound/card1/pcm0c/sub0/info"
+'2  1  0  ~/Local/Dev/uic/cs473/cs473-f25-a51-moltm3/ir_list_to_mips.c
+|4,50,1,0,1763435111,"~/Local/Dev/uic/cs473/cs473-f25-a51-moltm3/ir_list_to_mips.c"
 
 # Jumplist (newest first):
+-'  65  22  ~/Downloads/Python-3.13.12/README.rst
+|4,39,65,22,1770320337,"~/Downloads/Python-3.13.12/README.rst"
+-'  235  0  ~/Downloads/Python-3.13.12/README.rst
+|4,39,235,0,1770318930,"~/Downloads/Python-3.13.12/README.rst"
+-'  1  0  ~/Downloads/Python-3.13.12/README.rst
+|4,39,1,0,1770318928,"~/Downloads/Python-3.13.12/README.rst"
+-'  1  4  /proc/asound/card1/pcm0c/sub0/info
+|4,39,1,4,1768262919,"/proc/asound/card1/pcm0c/sub0/info"
 -'  1  4  /proc/asound/card1/pcm0c/sub0/info
 |4,39,1,4,1768262919,"/proc/asound/card1/pcm0c/sub0/info"
 -'  10  0  /proc/asound/card1/pcm0c
 |4,39,10,0,1768262914,"/proc/asound/card1/pcm0c"
+-'  10  0  /proc/asound/card1/pcm0c
+|4,39,10,0,1768262914,"/proc/asound/card1/pcm0c"
+-'  10  0  /proc/asound/card1
+|4,39,10,0,1768262913,"/proc/asound/card1"
 -'  10  0  /proc/asound/card1
 |4,39,10,0,1768262913,"/proc/asound/card1"
 -'  11  0  /proc/asound
 |4,39,11,0,1768262912,"/proc/asound"
+-'  11  0  /proc/asound
+|4,39,11,0,1768262912,"/proc/asound"
+-'  21  0  /proc/asound
+|4,39,21,0,1768262906,"/proc/asound"
 -'  21  0  /proc/asound
 |4,39,21,0,1768262906,"/proc/asound"
 -'  1  0  ~/Local/Dev/uic/cs473/cs473-f25-a51-moltm3/ir_list_to_mips.c
 |4,39,1,0,1763435111,"~/Local/Dev/uic/cs473/cs473-f25-a51-moltm3/ir_list_to_mips.c"
 -'  1  0  ~/Local/Dev/uic/cs473/cs473-f25-a51-moltm3/ir_list_to_mips.c
 |4,39,1,0,1763435111,"~/Local/Dev/uic/cs473/cs473-f25-a51-moltm3/ir_list_to_mips.c"
+-'  1  0  ~/Local/Dev/uic/cs473/cs473-f25-a51-moltm3/ir_list_to_mips.c
+|4,39,1,0,1763435111,"~/Local/Dev/uic/cs473/cs473-f25-a51-moltm3/ir_list_to_mips.c"
+-'  1  0  ~/Local/Dev/uic/cs473/cs473-f25-a51-moltm3/ir_list_to_mips.c
+|4,39,1,0,1763435111,"~/Local/Dev/uic/cs473/cs473-f25-a51-moltm3/ir_list_to_mips.c"
 
 # History of marks within files (newest to oldest):
+
+> ~/Downloads/Python-3.13.12/README.rst
+	*	1770320237	0
+	"	65	22
 
 > /proc/asound/card1/pcm0c/sub0/info
 	*	1768262918	0

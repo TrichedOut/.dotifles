@@ -32,7 +32,9 @@ return {
         },
       },
       filters = {
-        custom = { ".DS_Store" },
+        custom = { 
+          ".*\\.gd\\.uid"
+        },
       },
       git = {
         ignore = false,

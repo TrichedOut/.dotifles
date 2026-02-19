@@ -27,3 +27,7 @@ Local
 .ssh
 .zen
 .config/obsidian
+/.config/godot
+/.python_history
+/.zcompdumps/STARS-Arch-5.9
+/.m2/repository

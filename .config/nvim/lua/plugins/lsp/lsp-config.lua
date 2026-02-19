@@ -21,8 +21,6 @@ return {
       { "lukas-reineke/lsp-format.nvim" },
     },
     config = function()
-      local keymap = vim.keymap -- for conciseness
-
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("UserLspConfig", {}),
         callback = function(ev)
@@ -38,8 +36,7 @@ return {
             { "gd", "<cmd>Telescope lsp_definitions<CR>", desc = "[d]efinitions", buffer = ev.buf, silent = true }, -- show lsp definitions
             { "gi", "<cmd>Telescope lsp_implementations<CR>", desc = "[i]mplementations", buffer = ev.buf, silent = true }, -- show lsp implementations
             { "gt", "<cmd>Telescope lsp_type_definitions<CR>", desc = "[t]ype definitions", buffer = ev.buf, silent = true }, -- show lsp type definitions
-            { "<leader>c",  group = "[c]ode" },
-            { "<leader>ca", vim.lsp.buf.code_action, desc = "[a]ctions", buffer = ev.buf, silent = true }, -- see available code actions, in visual mode will apply to selection
+            { "<leader>a", vim.lsp.buf.code_action, desc = "[a]ctions", buffer = ev.buf, silent = true }, -- see available code actions, in visual mode will apply to selection
             { "<leader>r",  group = "[r]e-" },
             { "<leader>rn", vim.lsp.buf.rename, desc = "re[n]ame", buffer = ev.buf, silent = true }, -- smart rename
             { "<leader>rl", ":LspRestart<CR>", desc = "restart [l]sp", buffer = ev.buf, silent = true }, -- mapping to restart lsp if necessary
@@ -66,7 +63,6 @@ return {
       })
 
       vim.lsp.config('lua_ls', {
-
         settings = { -- custom settings for lua
           Lua = {
             -- make the language server recognize "vim" global
